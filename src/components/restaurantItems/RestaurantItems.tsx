@@ -1,10 +1,11 @@
 import React from 'react';
-import {View, StyleSheet, TouchableOpacity} from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 
-import {HomeNavigationProp} from '@src/modules/home/screens/Home';
+import { HomeNavigationProp } from '@src/modules/home/screens/Home';
 
 import RestaurantImage from './RestaurantImage';
 import RestaurantInfo from './RestaurantInfo';
+import { RESTAURANT_DETAIL } from '@src/app/navigation/route.actions';
 
 const styles = StyleSheet.create({
   restaurantContainer: {
@@ -32,7 +33,8 @@ interface Props {
 }
 
 const RestaurantItems: React.FC<Props> = props => {
-  const {navigation} = props;
+  const { navigation } = props;
+
   return (
     <>
       {props.restaurantData.map((restaurant, index) => (
@@ -41,7 +43,7 @@ const RestaurantItems: React.FC<Props> = props => {
           activeOpacity={1}
           style={styles.restaurantWrapper}
           onPress={() =>
-            navigation.navigate('RestaurantDetail', {
+            navigation.navigate(RESTAURANT_DETAIL, {
               name: restaurant.name,
               image: restaurant.image_url,
               price: restaurant.price,

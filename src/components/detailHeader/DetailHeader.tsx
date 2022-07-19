@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Image, Text, View } from 'react-native';
 
 import { RestaurantDetailRouteProp } from '@src/modules/home/screens/RestaurantDetail';
 
@@ -34,11 +34,39 @@ const DetailHeader: React.FC<Props> = props => {
 
   return (
     <View>
-      <RestaurantImage image={image} />
-      <RestaurantName name={name} />
+      <RestaurantImage image={image ?? ''} />
+      <RestaurantName name={name ?? ''} />
       <RestaurantDescription description={description} />
     </View>
   );
 };
 
 export default DetailHeader;
+
+const RestaurantImage: React.FC<{ image: string }> = props => (
+  <Image source={{ uri: props.image }} style={{ width: '100%', height: 180 }} />
+);
+
+const RestaurantName: React.FC<{ name: string }> = props => (
+  <Text
+    style={{
+      fontSize: 29,
+      fontWeight: '600',
+      marginTop: 10,
+      marginHorizontal: 15,
+    }}>
+    {props.name}
+  </Text>
+);
+
+const RestaurantDescription: React.FC<{ description: string }> = props => (
+  <Text
+    style={{
+      marginTop: 10,
+      marginHorizontal: 15,
+      fontWeight: '400',
+      fontSize: 15.5,
+    }}>
+    {props.description}
+  </Text>
+);

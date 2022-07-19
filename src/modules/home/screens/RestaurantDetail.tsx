@@ -3,6 +3,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import { Divider } from 'react-native-elements';
 import { ParamListBase, RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
+import { DetailHeader, MenuItems } from '@src/components';
 
 const styles = StyleSheet.create({
   container: {
@@ -61,8 +62,8 @@ const RestaurantDetail: React.FC<Props> = props => {
     <View>
       <DetailHeader route={route} />
       <Divider width={1.8} style={{ marginVertical: 20 }} />
-      {/* <MenuItems restaurantName={route.params.name} foods={foods} />
-    <ViewCart navigation={navigation} /> */}
+      <MenuItems restaurantName={route.params.name} foods={foods} />
+      {/* <ViewCart navigation={navigation} /> */}
     </View>
   );
 };
