@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {View, StyleSheet, SafeAreaView, ScrollView} from 'react-native';
 import {ParamListBase} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
+import {Divider} from 'react-native-elements';
 
 import {
   Categories,
@@ -101,7 +102,7 @@ const Home: React.FC<Props> = props => {
           navigation={navigation}
         />
       </ScrollView>
-      {/* <Divider width={1} /> */}
+      <Divider width={1} />
       {/* <BottomTabs /> */}
     </SafeAreaView>
   );

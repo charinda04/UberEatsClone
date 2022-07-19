@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const Profile: React.FC = () => (
+const Browse: React.FC = () => (
   <View style={styles.container}>
-    <Text>Profile</Text>
+    <Text>Browse</Text>
   </View>
 );
 
-export default Profile;
+export default Browse;

@@ -7,8 +7,10 @@ export default {
     signIn: 'Sign In',
   },
   mainTabs: {
-    training: 'training',
-    manage: 'manage',
-    notifications: 'notifications',
+    Home: 'Home',
+    Browse: 'Browse',
+    Grocery: 'Grocery',
+    Orders: 'Orders',
+    Account: 'Account',
   },
 };

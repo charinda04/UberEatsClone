@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const Cards: React.FC = () => (
+const Account: React.FC = () => (
   <View style={styles.container}>
-    <Text>Cards</Text>
+    <Text>Account</Text>
   </View>
 );
 
-export default Cards;
+export default Account;
