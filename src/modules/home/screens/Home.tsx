@@ -1,6 +1,6 @@
-import {HeaderTabs, SearchBar} from '@src/components';
+import {Categories, HeaderTabs, SearchBar} from '@src/components';
 import React, {useState} from 'react';
-import {Text, View, StyleSheet, SafeAreaView} from 'react-native';
+import {Text, View, StyleSheet, SafeAreaView, ScrollView} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -19,15 +19,15 @@ const Home: React.FC = () => {
         <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
         <SearchBar />
       </View>
-      {/* <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
-        <RestaurantItems
+        {/* <RestaurantItems
           restaurantData={restaurantData}
           navigation={navigation}
-        />
+        /> */}
       </ScrollView>
-      <Divider width={1} />
-      <BottomTabs /> */}
+      {/* <Divider width={1} /> */}
+      {/* <BottomTabs /> */}
     </SafeAreaView>
   );
 };
