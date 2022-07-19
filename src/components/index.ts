@@ -1,3 +1,4 @@
-// import AppIcon from './appIcon/AppIcon';
+import HeaderTabs from './headerTabs/HeaderTabs';
+import SearchBar from './searchBar/SearchBar';
 
-export {};
+export {HeaderTabs, SearchBar};
